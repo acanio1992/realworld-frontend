@@ -175,4 +175,7 @@ class Editor extends React.Component {
   }
 }
 
+// Exportar el componente sin connect para testing
+export { Editor };
+
 export default connect(mapStateToProps, mapDispatchToProps)(Editor);

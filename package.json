@@ -3,7 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "babel-jest": "^24.9.0",
     "cross-env": "^5.1.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-environment-jsdom": "^24.9.0",
     "react-scripts": "1.1.1"
   },
   "dependencies": {
@@ -26,6 +34,24 @@
     "start": "cross-env PORT=4100 react-scripts start",
     "build": "react-scripts build",
     "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
+    "test:coverage": "cross-env PORT=4100 react-scripts test --env=jsdom --coverage --watchAll=false",
+    "test:jest": "jest",
+    "coverage:jest": "jest --coverage",
+    "coverage:open": "jest --coverage && open coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/serviceWorker.js",
+      "!src/**/*.test.js",
+      "!src/**/*.spec.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
   }
 }
