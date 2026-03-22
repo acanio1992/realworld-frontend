@@ -1,6 +1,7 @@
 import DeleteButton from './DeleteButton';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import UserImage from '../UserImage';
 
 const Comment = props => {
   const comment = props.comment;
@@ -15,7 +16,7 @@ const Comment = props => {
         <Link
           to={`/@${comment.author.username}`}
           className="comment-author">
-          <img src={comment.author.image} className="comment-author-img" alt={comment.author.username} />
+          <UserImage src={comment.author.image} username={comment.author.username} className="comment-author-img" />
         </Link>
         &nbsp;
         <Link

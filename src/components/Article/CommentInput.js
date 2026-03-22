@@ -2,6 +2,7 @@ import React from 'react';
 import agent from '../../agent';
 import { connect } from 'react-redux';
 import { ADD_COMMENT } from '../../constants/actionTypes';
+import UserImage from '../UserImage';
 
 const mapDispatchToProps = dispatch => ({
   onSubmit: payload =>
@@ -40,10 +41,10 @@ class CommentInput extends React.Component {
           </textarea>
         </div>
         <div className="card-footer">
-          <img
+          <UserImage
             src={this.props.currentUser.image}
-            className="comment-author-img"
-            alt={this.props.currentUser.username} />
+            username={this.props.currentUser.username}
+            className="comment-author-img" />
           <button
             className="btn btn-sm btn-primary"
             type="submit">

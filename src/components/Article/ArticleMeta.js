@@ -1,13 +1,14 @@
 import ArticleActions from './ArticleActions';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import UserImage from '../UserImage';
 
 const ArticleMeta = props => {
   const article = props.article;
   return (
     <div className="article-meta">
       <Link to={`/@${article.author.username}`}>
-        <img src={article.author.image} alt={article.author.username} />
+        <UserImage src={article.author.image} username={article.author.username} />
       </Link>
 
       <div className="info">

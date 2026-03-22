@@ -47,6 +47,9 @@ export default (state = {}, action) => {
         currentPage: 0
       };
     case HOME_PAGE_LOADED:
+      if (action.error) {
+        return { ...state, tab: action.tab, currentPage: 0 };
+      }
       return {
         ...state,
         pager: action.pager,

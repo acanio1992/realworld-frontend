@@ -1,6 +1,7 @@
 import ArticleList from './ArticleList';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UserImage from './UserImage';
 import agent from '../agent';
 import { connect } from 'react-redux';
 import {
@@ -125,7 +126,7 @@ class Profile extends React.Component {
             <div className="row">
               <div className="col-xs-12 col-md-10 offset-md-1">
 
-                <img src={profile.image} className="user-img" alt={profile.username} />
+                <UserImage src={profile.image} username={profile.username} className="user-img" />
                 <h4>{profile.username}</h4>
                 <p>{profile.bio}</p>
 
