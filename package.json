@@ -33,25 +33,10 @@
   "scripts": {
     "start": "cross-env PORT=4100 react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
-    "test:coverage": "cross-env PORT=4100 react-scripts test --env=jsdom --coverage --watchAll=false",
-    "test:jest": "jest",
-    "coverage:jest": "jest --coverage",
-    "coverage:open": "jest --coverage && open coverage/lcov-report/index.html",
+    "test": "jest --watchAll=false",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --watchAll=false",
+    "coverage:open": "jest --coverage --watchAll=false && open coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!src/index.js",
-      "!src/serviceWorker.js",
-      "!src/**/*.test.js",
-      "!src/**/*.spec.js"
-    ],
-    "coverageReporters": [
-      "text",
-      "lcov",
-      "html"
-    ]
   }
 }

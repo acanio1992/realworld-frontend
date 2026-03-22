@@ -9,7 +9,7 @@ module.exports = {
     '!src/**/*.spec.js'
   ],
   coverageReporters: ['text', 'lcov', 'html'],
-  moduleNameMapping: {
+  moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
   transform: {
