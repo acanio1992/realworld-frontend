@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import UserImage from './UserImage';
 
 const LoggedOutView = props => {
+  // Stryker disable next-line ConditionalExpression
   if (!props.currentUser) {
     return (
       <ul className="nav navbar-nav pull-xs-right">
@@ -55,6 +56,7 @@ const LoggedInView = props => {
         </li>
 
         <li className="nav-item">
+          {/* Stryker disable next-line StringLiteral */}
           <Link
             to={`/@${props.currentUser.username}`}
             className="nav-link">

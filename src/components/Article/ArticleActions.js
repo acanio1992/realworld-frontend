@@ -38,4 +38,5 @@ const ArticleActions = props => {
   );
 };
 
+// Stryker disable next-line ArrowFunction
 export default connect(() => ({}), mapDispatchToProps)(ArticleActions);

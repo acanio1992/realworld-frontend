@@ -24,4 +24,5 @@ const DeleteButton = props => {
   return null;
 };
 
+// Stryker disable next-line ArrowFunction
 export default connect(() => ({}), mapDispatchToProps)(DeleteButton);

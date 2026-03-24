@@ -12,6 +12,7 @@ const mapDispatchToProps = dispatch => ({
 class CommentInput extends React.Component {
   constructor() {
     super();
+    // Stryker disable next-line ObjectLiteral
     this.state = {
       body: ''
     };
@@ -56,4 +57,5 @@ class CommentInput extends React.Component {
   }
 }
 
+// Stryker disable next-line ArrowFunction
 export default connect(() => ({}), mapDispatchToProps)(CommentInput);

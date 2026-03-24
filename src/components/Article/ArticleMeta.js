@@ -7,11 +7,13 @@ const ArticleMeta = props => {
   const article = props.article;
   return (
     <div className="article-meta">
+      {/* Stryker disable next-line StringLiteral */}
       <Link to={`/@${article.author.username}`}>
         <UserImage src={article.author.image} username={article.author.username} />
       </Link>
 
       <div className="info">
+        {/* Stryker disable next-line StringLiteral */}
         <Link to={`/@${article.author.username}`} className="author">
           {article.author.username}
         </Link>

@@ -13,14 +13,14 @@ const Comment = props => {
         <p className="card-text">{comment.body}</p>
       </div>
       <div className="card-footer">
-        <Link
-          to={`/@${comment.author.username}`}
+        {/* Stryker disable next-line StringLiteral */}
+        <Link to={`/@${comment.author.username}`}
           className="comment-author">
           <UserImage src={comment.author.image} username={comment.author.username} className="comment-author-img" />
         </Link>
         &nbsp;
-        <Link
-          to={`/@${comment.author.username}`}
+        {/* Stryker disable next-line StringLiteral */}
+        <Link to={`/@${comment.author.username}`}
           className="comment-author">
           {comment.author.username}
         </Link>

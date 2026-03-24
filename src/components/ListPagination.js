@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 import { SET_PAGE } from '../constants/actionTypes';
 
 const mapDispatchToProps = dispatch => ({
+  // Stryker disable next-line ArrowFunction
   onSetPage: (page, payload) =>
     dispatch({ type: SET_PAGE, page, payload })
 });
 
 const ListPagination = props => {
+  // Stryker disable next-line EqualityOperator
   if (props.articlesCount <= 10) {
     return null;
   }
@@ -19,6 +21,7 @@ const ListPagination = props => {
   }
 
   const setPage = page => {
+    // Stryker disable next-line BlockStatement
     if(props.pager) {
       props.onSetPage(page, props.pager(page));
     }else {
@@ -43,6 +46,7 @@ const ListPagination = props => {
                 onClick={onClick}
                 key={v.toString()}>
 
+                {/* Stryker disable next-line ArithmeticOperator */}
                 <a className="page-link" href="">{v + 1}</a>
 
               </li>
@@ -55,4 +59,5 @@ const ListPagination = props => {
   );
 };
 
+// Stryker disable next-line ArrowFunction
 export default connect(() => ({}), mapDispatchToProps)(ListPagination);

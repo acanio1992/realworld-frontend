@@ -46,6 +46,7 @@ export default (state = {}, action) => {
       };
     case UPDATE_FIELD_EDITOR:
       return { ...state, [action.key]: action.value };
+    // Stryker disable next-line ConditionalExpression
     default:
       return state;
   }

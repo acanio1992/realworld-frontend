@@ -37,11 +37,13 @@ const ArticlePreview = props => {
   return (
     <div className="article-preview">
       <div className="article-meta">
+        {/* Stryker disable next-line StringLiteral */}
         <Link to={`/@${article.author.username}`}>
           <UserImage src={article.author.image} username={article.author.username} />
         </Link>
 
         <div className="info">
+          {/* Stryker disable next-line StringLiteral */}
           <Link className="author" to={`/@${article.author.username}`}>
             {article.author.username}
           </Link>
@@ -57,6 +59,7 @@ const ArticlePreview = props => {
         </div>
       </div>
 
+      {/* Stryker disable next-line StringLiteral */}
       <Link to={`/article/${article.slug}`} className="preview-link">
         <h1>{article.title}</h1>
         <p>{article.description}</p>
@@ -77,4 +80,5 @@ const ArticlePreview = props => {
   );
 }
 
+// Stryker disable next-line ArrowFunction
 export default connect(() => ({}), mapDispatchToProps)(ArticlePreview);

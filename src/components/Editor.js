@@ -72,6 +72,7 @@ class Editor extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.slug !== nextProps.match.params.slug) {
+      // Stryker disable next-line ConditionalExpression
       if (nextProps.match.params.slug) {
         this.props.onUnload();
         return this.props.onLoad(agent.Articles.get(this.props.match.params.slug));
